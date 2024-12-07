@@ -1,8 +1,6 @@
 import os
 import sys
-
-class MyException(Exception):
-    pass
+from modules.exception_module import MyException
 
 def create_structure(directory_path, json_path):
     if not os.path.isdir(directory_path):
