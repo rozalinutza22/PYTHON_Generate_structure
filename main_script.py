@@ -15,7 +15,9 @@ def create_structure(directory_path, json_path):
     if not json_path.endswith('.json'):
         raise MyException(f"File {os.path.basename(json_path)} is not JSON")
     
-    generate_structure_in_empty_folder(directory_path, json_path)
+    empty_the_directory(directory_path)
+
+    #generate_structure_in_empty_folder(directory_path, json_path)
 
 if __name__ == "__main__":
     try:
