@@ -1,5 +1,5 @@
 import json
-from exception_module import MyException
+from modules.exception_module import MyException
 
 def read_json_content(json_path):
     try:

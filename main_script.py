@@ -3,6 +3,7 @@ import sys
 from modules.exception_module import MyException
 from modules.read_json_module import read_json_content
 from modules.empty_directory_module import empty_the_directory
+from modules.create_structure_in_empty_folder_module import generate_structure_in_empty_folder
 
 def create_structure(directory_path, json_path):
     if not os.path.isdir(directory_path):

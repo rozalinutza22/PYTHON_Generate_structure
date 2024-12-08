@@ -1,5 +1,5 @@
 import os
-from exception_module import MyException
+from modules.exception_module import MyException
 
 def empty_the_directory(directory_path):
     for root, directories, files in os.walk(directory_path):
