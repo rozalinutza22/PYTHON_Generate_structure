@@ -22,12 +22,28 @@ def empty_the_directory(directory_path):
         for d in directories:
             try:
                 print(f"\nTrying to remove {d}")
-                shutil.rmtree(directory_path)
+                dir_path = os.path.join(directory_path, d)
+                shutil.rmtree(dir_path)
             except FileNotFoundError:
                 raise MyException(f"Directory {d} does not exist!")
             except PermissionError:
                 raise MyException(f"Insufficient permissions to delete {d}")
             except Exception as e:
                 print(e)
+
+        for file_name in files:
+            file_path = os.path.join(directory_path, file_name)
+
+            try:
+                
+                print(f"\nTrying to remove {file_name} ... ")
+                os.remove(file_path)
+                print(f"\nSuccessfully removed {file_name}")
+
+            except PermissionError:
+                raise MyException(f"\nInssuficient permissions to delete file {file_name}")
+            except Exception as e:
+                print(e)
+            
 
 
