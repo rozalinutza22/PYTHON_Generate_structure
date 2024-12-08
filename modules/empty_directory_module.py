@@ -1,4 +1,3 @@
-import json
 import os
 from exception_module import MyException
 
