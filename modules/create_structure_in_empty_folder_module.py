@@ -8,6 +8,13 @@ def generate_structure_in_empty_folder(directory_path, json_path):
     for key, value in structure.items():
         if isinstance(value, dict):
             print(f"{key} va fi folder")
-        else:
-            print(f"{key} va fi fisier")
+
+        elif isinstance(value, str):
+            try:
+                file_path = os.path.join(directory_path, key)
+                f = open(f"{file_path}.txt", "w")
+                f.write(value)
+
+            except Exception as e:
+                print(e)
     
