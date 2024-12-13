@@ -16,7 +16,7 @@ def create_file_recursively(directory_path, dictionary):
         elif isinstance(value, str):
             try:
                 file_path = os.path.join(directory_path, key)
-                f = open(f"{file_path}.txt", "w")
+                f = open(f"{file_path}", "w")
                 f.write(value)
 
             except Exception as e:
