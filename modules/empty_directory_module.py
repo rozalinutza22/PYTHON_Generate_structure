@@ -10,6 +10,8 @@ def empty_the_directory(directory_path):
                 print(f"\nTrying to remove {d}")
                 dir_path = os.path.join(directory_path, d)
                 shutil.rmtree(dir_path)
+                print(f"\nSuccessfully removed {d}")
+                
             except FileNotFoundError:
                 raise MyException(f"Directory {d} does not exist!")
             except PermissionError:
