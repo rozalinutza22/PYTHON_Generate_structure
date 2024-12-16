@@ -17,6 +17,7 @@ def create_structure(directory_path, json_path):
     
     if len(os.listdir(directory_path)) == 0:
         generate_structure_in_empty_folder(directory_path, json_path)
+        print(f"\nSuccessfully created the folder's hierarchy!\n")
 
     else:
         print(f"\nThe directory is not empty!\n")
